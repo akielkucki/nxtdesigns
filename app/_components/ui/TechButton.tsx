@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import { motion } from 'framer-motion';
-
-const TechButton = ({children}) => {
+interface Props {
+    children: React.ReactNode;
+}
+const TechButton = ({children}: Props ) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
