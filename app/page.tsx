@@ -1,12 +1,12 @@
 "use client"
-import React, { useState } from 'react';
-import { ArrowRight, Check, Layout, Zap, Globe, Mail, Layers, Code } from 'lucide-react';
+import React, {FormEvent, useState} from 'react';
+import { ArrowRight, Layout, Mail, Layers, Code } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HomePage = () => {
     const [email, setEmail] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         alert(`Thank you for subscribing with: ${email}`);
         setEmail('');
@@ -235,7 +235,7 @@ const HomePage = () => {
                             className="text-gray-600 max-w-2xl mx-auto"
                             variants={fadeIn}
                         >
-                            See how we've helped businesses transform their digital presence with stunning designs.
+                            See how we&#39;ve helped businesses transform their digital presence with stunning designs.
                         </motion.p>
                     </motion.div>
 
@@ -415,7 +415,7 @@ const HomePage = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                     >
-                        Let's create a website that not only looks great but drives real business results.
+                        Let&#39;s create a website that not only looks great but drives real business results.
                     </motion.p>
                     <motion.button
                         className="bg-[#FF3B30] hover:bg-red-600 text-white px-8 py-4 rounded-md transition-colors text-lg font-medium"
