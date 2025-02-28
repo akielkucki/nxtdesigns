@@ -1,97 +1,74 @@
-"use client";
+"use client"
 import React from 'react';
-import {motion} from "framer-motion";
-import {ArrowRight} from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const NavBar = () => {
+const Navbar = () => {
+    const navItems = ['Services', 'Portfolio', 'Process', 'Contact'];
+
     return (
-        <motion.nav
-            initial={{y: -100}}
-            animate={{y: 0}}
-            transition={{type: "spring", stiffness: 100}}
-            className="flex justify-between items-center px-6 py-4 md:px-12 bg-black text-white sticky top-0 z-50"
-        >
-            <motion.div
-                className="text-xl font-bold"
-                whileHover={{scale: 1.05}}
-                transition={{type: "spring", stiffness: 400}}
-            >
-                NXT<span className="text-[#FF3B30]">STUDIOS</span>
-            </motion.div>
+        <nav className="flex justify-between items-center px-6 py-4 md:px-12 bg-black sticky top-0 z-50">
+            {/* Logo */}
+            <div className="text-xl font-bold text-white">
+                CR8V<span className="text-[#FF3B30]">AGENCY</span>
+            </div>
+
+            {/* Navigation Items */}
             <div className="hidden md:flex space-x-8 items-center">
-                {['Services', 'Portfolio', 'Process', 'Contact'].map((item, index) => (
-                    <motion.div
+                {navItems.map((item) => (
+                    <div
                         key={item}
                         className="relative group"
-                        initial={{opacity: 0, y: -20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{delay: index * 0.1}}
                     >
-                        <a
-                            href={`#${item.toLowerCase()}`}
-                            className="relative z-10 transition-colors"
-                        >
-                <span className="relative inline-block">
-                  {/* Background gradient that will be revealed on hover */}
-                    <span
-                        className="absolute inset-0 w-full h-full group-hover:bg-[length:200%_200%]"
-                        style={{
-                            background: `radial-gradient(circle, #FF3B30 0%, #FF3B30 50%, transparent 50.1%)`,
-                            backgroundSize: '0% 0%',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            transition: 'all 0.6s ease-out',
-                        }}
+                        <a href={`#${item.toLowerCase()}`} className="relative block px-2 py-1">
+                            {/* This is the fully visible white text that appears by default */}
+                            <span className="relative z-10 text-white group-hover:text-transparent transition-colors duration-300">
+                                {item}
+                            </span>
 
-                    >
-                    {item}
-                  </span>
+                            {/* This is the colored radial gradient background that appears on hover */}
+                            <motion.div
+                                className="absolute inset-0 bg-gradient-radial from-[#FF3B30] to-transparent rounded-full"
+                                initial={{ scale: 0, opacity: 0 }}
+                                whileHover={{
+                                    scale: 4,
+                                    opacity: 1,
+                                    transition: { duration: 0.6, ease: "easeOut" }
+                                }}
+                                style={{
+                                    originX: 0.5,
+                                    originY: 0.5,
+                                    position: 'absolute',
+                                    top: '50%',
+                                    left: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    width: '10px',
+                                    height: '10px',
+                                    zIndex: 0
+                                }}
+                            />
 
-                    {/* Text outline that will remain visible */}
-                    <span
-                        className="relative group-hover:text-transparent transition-colors duration-300"
-                        style={{
-                            WebkitTextStroke: '1px white'
-                        }}
-                    >
-                    {item}
-                  </span>
-                </span>
+                            {/* This is the colored text that appears on hover */}
+                            <span className="absolute inset-0 flex items-center justify-center text-[#FF3B30] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                                {item}
+                            </span>
                         </a>
-
-                        {/* Animated gradient background */}
-                        <motion.div
-                            className="absolute inset-0 rounded-full"
-                            initial={{scale: 0, x: '50%', y: '50%'}}
-                            whileHover={{
-                                scale: 5,
-                                transition: {duration: 0.5}
-                            }}
-                            style={{
-                                background: 'radial-gradient(circle, #FF3B30 0%, transparent 70%)',
-                                width: '10px',
-                                height: '10px',
-                                left: '50%',
-                                top: '50%',
-                                transform: 'translate(-50%, -50%)',
-                                opacity: 0.3,
-                                pointerEvents: 'none'
-                            }}
-                        />
-                    </motion.div>
+                    </div>
                 ))}
             </div>
-            <motion.button
-                className="bg-[#FF3B30] hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors flex items-center"
-                whileHover={{scale: 1.05}}
-                whileTap={{scale: 0.95}}
-            >
-                Start Project <ArrowRight className="ml-2 w-4 h-4"/>
-            </motion.button>
-        </motion.nav>
+
+            {/* Start Project Button */}
+            <button className="bg-[#FF3B30] hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors flex items-center">
+                Start Project <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
+
+            <style jsx global>{`
+                .bg-gradient-radial {
+                    background: radial-gradient(circle, rgba(255, 59, 48, 0.9) 0%, rgba(255, 59, 48, 0.5) 50%, rgba(255, 59, 48, 0) 90%);
+                }
+            `}</style>
+        </nav>
     );
 };
 
-export default NavBar;
+export default Navbar;
