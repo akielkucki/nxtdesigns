@@ -127,9 +127,9 @@ const HomePage = () => {
                     </motion.div>
                 </div>
             </section>
-
-            <About/>
             <ScrollingWords />
+            <About/>
+
             <HorizontalScrollCarosuel/>
             {/* the "Why" Section */}
             <ProjectsSection />
