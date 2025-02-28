@@ -107,7 +107,7 @@ export default function Footer() {
                         whileHover={{x: 5}}
                     >
                         <Mail className="w-5 h-5 text-[#FF3B30] mt-1"/>
-                        hello@designstudio.com
+                        team@gocre8v.com
                     </motion.p>
                     <motion.p whileHover={{x: 5}}>
                         1161 Lynch Cir<br/>Warminster, PA, 18974
