@@ -12,11 +12,28 @@ export default function ProjectsSection() {
     const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
 
     const rotate = useTransform(scrollYProgress, [0, 1], [180, -90]); // Rotates from 0° to 180°
+    // const zeroMotion = useMotionValue(-45);
+    // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    // useEffect(() => {
+    //     const onResize = () => {
+    //         setScreenWidth(window.innerWidth);
+    //     }
+    //     window.addEventListener("resize", onResize);
+    //     return () => window.removeEventListener("resize", onResize);
+    // },[])
+
     return (
         <section id="why" className="py-20 px-6 md:px-12 bg-black text-white">
             <div className="max-w-5xl mx-auto ">
                 <div className={"flex items-start"}>
-                    <h1 className={"text-white text-center text-5xl flex flex-col mx-auto items-center justify-center py-20 md:pt-0 px-0 "}> <span className={""}>Convey <span className={"font-fancy text-7xl"}>emotion</span></span><span>that hooks</span>
+                    <div className={"flex flex-col  mx-auto items-center justify-center py-20 md:pt-0 px-0"}>
+                        <motion.h1
+                            initial={{transform: "translateY(-100px)"}}
+                            whileInView={{transform: "translateY(0px)"}}
+                            transition={{duration: 0.5, ease: "easeInOut"}}
+                            className={"text-white text-center text-5xl flex flex-col lg:flex-row justify-center items-center"}>
+
+                            <span className={""}>Convey <span className={"font-fancy text-7xl"}>emotion</span> </span><span className={"lg:px-2.5"}>&nbsp;that hooks</span></motion.h1>
                         <motion.div
                             ref={ref}
                         >
@@ -30,24 +47,28 @@ export default function ProjectsSection() {
                                     alignItems: "center",
                                     justifyContent: "center",
                                     borderRadius: 20,
-                                    rotate,
+                                    rotate: rotate,
                                 }}
                             ><Magnet className={"w-20 h-20"}/></motion.div>
                         </motion.div>
-                    </h1>
+                    </div>
+
+
                     <div className="flex justify-center items-center flex-col"></div>
 
                 </div>
-                    <Element>
-                        <>
-                            <ElementHeading>More Awareness</ElementHeading>
-                            <ElementSubheading>
-                                Our modern websites merge cutting-edge design, intuitive navigation, and immersive content to elevate your brand’s visibility, engaging audiences and fostering a memorable online presence that drives trust and growth.
-                            </ElementSubheading>
-                        </>
-                    </Element>
+                <Element>
+                    <>
+                        <ElementHeading>More Awareness</ElementHeading>
+                        <ElementSubheading>
+                            Our modern websites merge cutting-edge design, intuitive navigation, and immersive content
+                            to elevate your brand’s visibility, engaging audiences and fostering a memorable online
+                            presence that drives trust and growth.
+                        </ElementSubheading>
+                    </>
+                </Element>
 
-                    <Element>
+                <Element>
                         <>
                             <ElementHeading>Stunning Design</ElementHeading>
                             <ElementSubheading>
@@ -83,7 +104,7 @@ function Element({children, onMouseOver}: { children: React.ReactNode, onMouseOv
 
     return <motion.div
         onMouseOver={onMouseOver}
-        initial={{backgroundColor: "rgba(0, 0, 0, 1)", color: "rgba(255, 255, 255, 1)", transform: "translateY(70px)", opacity: 0}}
+        initial={{backgroundColor: "rgba(0, 0, 0, 1)", color: "rgba(255, 255, 255, 1)", transform: "translateY(170px)", opacity: 0}}
         whileHover={{
             backgroundColor: "rgba(255, 255, 255, 1)",
             color: "rgba(0, 0, 0, 1)",
