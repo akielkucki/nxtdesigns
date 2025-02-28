@@ -29,11 +29,11 @@ export const metadata: Metadata = {
         title: "CRE8V Studios | Innovative Marketing & Web Design Agency",
         description:
             "Discover innovative marketing strategies and creative web design solutions at CR8V Studios to boost your brand's online presence and drive growth.",
-        url: "https://www.cre8vstudios.com",
+        url: "https://www.gocre8v.com",
         siteName: "CRE8V Studios",
         images: [
             {
-                url: "https://www.cre8vstudios.com/og-image.jpg",
+                url: "https://www.gocre8v.com/og-image.jpg",
                 width: 800,
                 height: 600,
                 alt: "CRE8V Studios",
