@@ -51,21 +51,9 @@ const HomePage = () => {
         }
     };
 
-    const popUp = {
-        hidden: { scale: 0.8, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                stiffness: 300,
-                damping: 15
-            }
-        }
-    };
 
     return (
-        <div className="min-h-screen bg-white text-black font-sans">
+        <div className="min-h-screen bg-white text-black">
 
             {/* Hero Section */}
             <section className="relative py-20 px-6 md:px-12 bg-black text-white overflow-hidden h-screen flex justify-center items-center">
@@ -143,8 +131,8 @@ const HomePage = () => {
             <About/>
             <ScrollingWords />
             <HorizontalScrollCarosuel/>
-            {/* Portfolio Section */}
-            <ProjectsSection fadeIn={fadeIn} popUp={popUp} staggerContainer={staggerContainer} />
+            {/* the "Why" Section */}
+            <ProjectsSection />
 
             {/* Process Section */}
             <section id="process" className="py-20 px-6 md:px-12 bg-black text-white">

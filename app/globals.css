@@ -117,5 +117,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-gabarito);
+  }
+  .font-fancy {
+    font-family: var(--font-fancy);
   }
 }
