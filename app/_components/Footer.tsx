@@ -31,7 +31,7 @@ export default function Footer() {
                     whileHover={{scale: 1.05}}
                     transition={{type: "spring", stiffness: 400}}
                 >
-                    CR8V<span className="text-[#FF3B30]">AGENCY</span>
+                    CRE8V<span className="text-[#FF3B30]">AGENCY</span>
                 </motion.div>
                 <p className="text-gray-400 mb-4">Creating stunning websites that drive business growth.</p>
                 <div className="flex space-x-4">

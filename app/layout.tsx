@@ -14,7 +14,7 @@ const ephesis = Ephesis({
 })
 
 export const metadata: Metadata = {
-    title: "CR8V Studios | Innovative Marketing & Web Design Agency",
+    title: "CRE8V Studios | Innovative Marketing & Web Design Agency",
     description:
         "Elevate your brand with CR8V Studios. We deliver tailored digital marketing strategies, creative web design, and compelling branding solutions to drive growth and online success.",
     keywords: [
@@ -26,17 +26,17 @@ export const metadata: Metadata = {
         "page traffic",
     ],
     openGraph: {
-        title: "CR8V Studios | Innovative Marketing & Web Design Agency",
+        title: "CRE8V Studios | Innovative Marketing & Web Design Agency",
         description:
             "Discover innovative marketing strategies and creative web design solutions at CR8V Studios to boost your brand's online presence and drive growth.",
-        url: "https://www.cr8vstudios.com",
-        siteName: "CR8V Studios",
+        url: "https://www.cre8vstudios.com",
+        siteName: "CRE8V Studios",
         images: [
             {
-                url: "https://www.cr8vstudios.com/og-image.jpg",
+                url: "https://www.cre8vstudios.com/og-image.jpg",
                 width: 800,
                 height: 600,
-                alt: "CR8V Studios",
+                alt: "CRE8V Studios",
             },
         ],
         type: "website",
