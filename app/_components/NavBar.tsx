@@ -11,7 +11,7 @@ const Navbar = () => {
     const navItems = [
         { name: 'Services', icon: '⚡' },
         { name: 'Portfolio', icon: '🔥' },
-        { name: 'Process', icon: '⚙️' },
+        { name: 'Process', icon: '🛠️' },
         { name: 'Contact', icon: '📱' }
     ];
 
