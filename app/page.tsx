@@ -1,8 +1,6 @@
 "use client"
-import React, {FormEvent, useState} from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import Image from "next/image";
-import CountUp from "react-countup";
 import About from "@/app/_components/AboutSection";
 import ScrollingWords from "@/app/_components/ui/ScrollingWords";
 import ProjectsSection from "@/app/_components/ProjectsSection";
@@ -11,13 +9,13 @@ import HorizontalScrollCarosuel from "@/app/_components/HorizontalScrollCarosuel
 import Hero from "@/app/_components/Hero";
 
 const HomePage = () => {
-    const [email, setEmail] = useState('');
+    // const [email, setEmail] = useState('');
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        alert(`Thank you for subscribing with: ${email}`);
-        setEmail('');
-    };
+    // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault();
+    //     alert(`Thank you for subscribing with: ${email}`);
+    //     setEmail('');
+    // };
 
     // Animation variants
     const fadeIn = {
