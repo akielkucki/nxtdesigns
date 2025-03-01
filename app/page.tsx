@@ -8,6 +8,7 @@ import ScrollingWords from "@/app/_components/ui/ScrollingWords";
 import ProjectsSection from "@/app/_components/ProjectsSection";
 import Footer from "@/app/_components/Footer";
 import HorizontalScrollCarosuel from "@/app/_components/HorizontalScrollCarosuel";
+import Hero from "@/app/_components/Hero";
 
 const HomePage = () => {
     const [email, setEmail] = useState('');
@@ -56,80 +57,10 @@ const HomePage = () => {
         <div className="min-h-screen bg-white text-black">
 
             {/* Hero Section */}
-            <section className="relative py-20 px-6 md:px-12 bg-black text-white overflow-hidden h-screen flex justify-center items-center">
-                <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                    <motion.div
-                        initial="hidden"
-                        animate="visible"
-                        variants={fadeIn}
-                    >
-                        <motion.h1
-                            className="text-4xl md:text-5xl font-bold mb-6"
-                            variants={fadeIn}
-                        >
-                            Stunning <span className="text-[#FF3B30]">Web Design</span> That Converts
-                        </motion.h1>
-                        <motion.p
-                            className="text-lg mb-8 text-gray-300"
-                            variants={fadeIn}
-                        >
-                            We create beautiful, functional websites that elevate your brand and drive results. From simple landing pages to complex e-commerce stores.
-                        </motion.p>
-                        <motion.form
-                            onSubmit={handleSubmit}
-                            className="flex flex-col sm:flex-row gap-4"
-                            variants={fadeIn}
-                        >
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="flex-grow px-4 py-3 rounded-md focus:outline-none text-black"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                            <motion.button
-                                type="submit"
-                                className="bg-[#FF3B30] hover:bg-red-600 px-6 py-3 rounded-md transition-colors whitespace-nowrap"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                Get Free Consultation
-                            </motion.button>
-                        </motion.form>
-                    </motion.div>
-                    <motion.div
-                        className="relative"
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                    >
-                        <motion.div
-                            className="bg-gray-800 rounded-lg w-full aspect-video flex items-center justify-center overflow-hidden"
-                            whileHover={{ scale: 1.03 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                        >
-                            <Image src="/api/placeholder/600/400" alt="Website Design Preview" className="rounded-lg" width={1000} height={1000} />
-                        </motion.div>
-                        <motion.div
-                            className="absolute -bottom-6 -right-6 bg-[#FF3B30] p-4 rounded-md text-white"
-                            initial={{ scale: 0, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ delay: 0.5, type: "spring", stiffness: 300 }}
-                            whileHover={{
-                                scale: 1.1,
-                                boxShadow: "0 10px 25px rgba(255, 59, 48, 0.5)"
-                            }}
-                        >
-                            <span className="block text-2xl font-bold"><CountUp end={400}/>%</span>
-                            <span className="text-sm">Faster load times than other websites</span>
-                        </motion.div>
-                    </motion.div>
-                </div>
-            </section>
-            <ScrollingWords />
-            <About/>
+            <Hero/>
 
+            <About/>
+            <ScrollingWords />
             <HorizontalScrollCarosuel/>
             {/* the "Why" Section */}
             <ProjectsSection />

@@ -7,7 +7,7 @@ const About = () => {
     const isInView = useInView(containerRef, { once: false, amount: 0.3 });
 
     // Text with underscore markers for keywords
-    const text = "At CR8V, we believe in more than just design—we believe in transformation. " +
+    const text = "At _CRE8V, we believe in more than just design—we believe in transformation. " +
         "Our vision is to take your ideas and push them beyond expectations, creating _bold, " +
         "_innovative, and _impactful digital experiences.\n\n" +
         "We treat every project as an opportunity for excellence, ensuring that your vision " +
