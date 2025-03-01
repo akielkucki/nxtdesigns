@@ -7,6 +7,7 @@ import ProjectsSection from "@/app/_components/ProjectsSection";
 import Footer from "@/app/_components/Footer";
 import HorizontalScrollCarosuel from "@/app/_components/HorizontalScrollCarosuel";
 import Hero from "@/app/_components/Hero";
+import ScrollingBrands from "@/app/_components/ui/ScrollingBrands";
 
 const HomePage = () => {
     // const [email, setEmail] = useState('');
@@ -56,7 +57,7 @@ const HomePage = () => {
 
             {/* Hero Section */}
             <Hero/>
-
+            <ScrollingBrands />
             <About/>
             <ScrollingWords />
             <HorizontalScrollCarosuel/>
