@@ -67,7 +67,7 @@ const Navbar = () => {
                             {/* Logo text */}
                             <a href="#" className="relative text-2xl font-black tracking-tighter z-10">
                                 <span className="text-white">CRE</span>
-                                <span className="text-red-600">8V</span>
+                                <span className="text-black">8V</span>
                                 <motion.span
                                     className="text-white"
                                     animate={{ color: ['#FFFFFF', '#FF3B30', '#FFFFFF'] }}
